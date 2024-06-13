@@ -5,7 +5,7 @@ module PlotlyBaseExt
 
     function ExamplePackage.plot_4_lines()
         data = map(1:4) do i
-            scatter(;y = rand(10), name = "line 1")
+            scatter(;y = rand(10), name = "line $i")
         end
         layout = Layout(;
             template = "none",
