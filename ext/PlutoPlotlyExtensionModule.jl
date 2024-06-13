@@ -1,6 +1,6 @@
-module PlutoPlotlyExt
+module PlutoPlotlyExtensionModule
     import PlutoPlotly
-    using PlotlyExtensionsHelper
+    import PlotlyExtensionsHelper
 
     # Load the function for PlutoPlotly
     PlotlyExtensionsHelper._plot_func(::Val{:PlutoPlotly}) = PlutoPlotly.plot

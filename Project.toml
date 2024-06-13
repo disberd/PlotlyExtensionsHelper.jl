@@ -1,17 +1,22 @@
 name = "PlotlyExtensionsHelper"
 uuid = "a7e57fc7-3548-4021-90c3-ac0e175068b1"
 authors = ["Alberto Mengali <disberd@gmail.com> and contributors"]
-version = "0.1.0"
+version = "0.2.0"
+
+[deps]
 
 [weakdeps]
 PlotlyBase = "a03496cd-edff-5a9b-9e67-9cda94a718b5"
 PlutoPlotly = "8e989ff0-3d88-8e9f-f020-2b208a939ff0"
+PlotlyJS = "f0f68f2c-4968-5e81-91da-67840de0976a"
 
 [extensions]
-PlotlyBaseExt = "PlotlyBase"
-PlutoPlotlyExt = "PlutoPlotly"
+PlotlyBaseExtensionModule = "PlotlyBase"
+PlotlyJSExtensionModule = "PlotlyJS"
+PlutoPlotlyExtensionModule = "PlutoPlotly"
 
 [compat]
-julia = "1.9"
 PlotlyBase = "0.8"
-PlutoPlotly = "0.4 - 1"
+PlotlyJS = "0.18"
+PlutoPlotly = "0.4"
+julia = "1.9"
