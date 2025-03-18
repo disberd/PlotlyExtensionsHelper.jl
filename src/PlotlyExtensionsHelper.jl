@@ -1,5 +1,7 @@
 module PlotlyExtensionsHelper
 
+include("utilities.jl") # These are utilities extractd from PlutoPlotly
+
 export plotly_plot
 
 const PLOT_FUNC_PRIORITY = [:PlutoPlotly, :PlotlyJS, :PlotlyBase]

@@ -1,3 +1,5 @@
+coverage/
+
 Manifest.toml
 
 !test/ExampleEnvironment/**/Manifest.toml
