@@ -1,7 +1,7 @@
 name = "PlotlyExtensionsHelper"
 uuid = "a7e57fc7-3548-4021-90c3-ac0e175068b1"
 authors = ["Alberto Mengali <disberd@gmail.com> and contributors"]
-version = "0.2.1"
+version = "0.2.2"
 
 [deps]
 
@@ -21,5 +21,5 @@ PlutoPlotlyExtensionModule = "PlutoPlotly"
 ColorSchemes = "3.29.0"
 PlotlyBase = "0.8"
 PlotlyJS = "0.18"
-PlutoPlotly = "0.4, 0.5"
+PlutoPlotly = "0.4, 0.5, 0.6"
 julia = "1.9"
