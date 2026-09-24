@@ -4,25 +4,27 @@ This file contains the changelog for the PlotlyExtensionsHelper package. It foll
 
 ## Unreleased
 
-## [0.3.0]
+## [0.3.0] - 2026-09-24
+
+This release is breaking. [PR #8](https://github.com/disberd/PlotlyExtensionsHelper.jl/pull/8) explains the motivation and lists the breaking changes.
+
+### Breaking
+
+- The minimum supported Julia version is 1.12.
+- `PLOT_FUNC_PRIORITY` is a `Dict{Symbol, Int}` of integer priorities, and no longer an ordered `Vector{Symbol}`. To change the priority of a backend, set its integer priority.
+- This release removes the internal `_plot_func(::Val{name})` hook. To add a backend, use `register_plot_func!`. To check if Julia loaded an extension, use `Base.get_extension`.
+- Preferences is a new dependency.
 
 ### Added
 
 - `register_plot_func!(name, f; priority)` lets other packages add a plotting backend with a default priority from the `__init__` of their extension, without type piracy.
-- `PLOT_FUNC_PRIORITY` is a `Dict` of integer priorities. `plotly_plot` uses the loaded backend with the highest priority. For equal priorities, it uses the name that sorts first.
+- `plotly_plot` uses the loaded backend with the highest priority. For equal priorities, it uses the name that sorts first.
 - The `plot_func_priority` preference changes the priority of a backend for all sessions.
 - Mark `register_plot_func!`, `PLOT_FUNC_PRIORITY`, `sample_colorscheme` and `discrete_colorscale` as `public`.
 
 ### Changed
 
-- The minimum supported Julia version is 1.12.
-- Preferences is a dependency.
 - The extensions of this package register their backends with the default priorities PlutoPlotly 20, PlotlyJS 10, and PlotlyBase 0.
-- `PLOT_FUNC_PRIORITY` is no longer an ordered `Vector{Symbol}`. Change the integer priority of a backend instead of the position in a vector.
-
-### Removed
-
-- The internal `_plot_func(::Val{name})` hook. Use `register_plot_func!` to add a backend, and `Base.get_extension` to check if Julia loaded an extension.
 
 ## [0.2.2] - 2025-03-23
 
