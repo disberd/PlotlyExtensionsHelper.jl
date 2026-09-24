@@ -2,6 +2,5 @@ module PlutoPlotlyExtensionModule
     import PlutoPlotly
     import PlotlyExtensionsHelper
 
-    # Load the function for PlutoPlotly
-    PlotlyExtensionsHelper._plot_func(::Val{:PlutoPlotly}) = PlutoPlotly.plot
+    __init__() = PlotlyExtensionsHelper.register_plot_func!(:PlutoPlotly, PlutoPlotly.plot; priority = 20)
 end
