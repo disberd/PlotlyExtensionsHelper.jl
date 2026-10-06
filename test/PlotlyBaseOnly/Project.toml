@@ -1,0 +1,8 @@
+[deps]
+ColorSchemes = "35d6a980-a343-548e-a6ea-1d62b119f2f4"
+PlotlyBase = "a03496cd-edff-5a9b-9e67-9cda94a718b5"
+PlotlyExtensionsHelper = "a7e57fc7-3548-4021-90c3-ac0e175068b1"
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[sources]
+PlotlyExtensionsHelper = {path = "../.."}

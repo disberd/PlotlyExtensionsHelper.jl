@@ -42,3 +42,18 @@ jobs:
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           slug: disberd/PlotlyExtensionsHelper.jl
+  plotlybase-only:
+    name: PlotlyBase only - Julia 1 - ubuntu-latest
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      actions: write
+      contents: read
+    steps:
+      - uses: actions/checkout@v7
+      - uses: julia-actions/setup-julia@v3
+        with:
+          version: '1'
+      - uses: julia-actions/cache@v3
+      - name: Run tests
+        run: julia --color=yes --project=test/PlotlyBaseOnly -e 'using Pkg; Pkg.instantiate(); include("test/PlotlyBaseOnly/runtests.jl")'
