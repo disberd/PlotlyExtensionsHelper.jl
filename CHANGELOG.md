@@ -4,6 +4,12 @@ This file contains the changelog for the PlotlyExtensionsHelper package. It foll
 
 ## Unreleased
 
+## [0.3.1] - 2026-10-06
+
+### Changed
+
+- Add compat for PlotlyBase 0.9 and 0.10.
+
 ## [0.3.0] - 2026-09-24
 
 This release is breaking. [PR #8](https://github.com/disberd/PlotlyExtensionsHelper.jl/pull/8) explains the motivation and lists the breaking changes.
